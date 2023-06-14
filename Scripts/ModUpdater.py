@@ -187,7 +187,7 @@ tab2 = [[ui.Text('Install fabric loader'), ui.Checkbox('',key='installFabric')]]
 tab3 = [[ui.Text('Auto check for new mods on startup?'), ui.Checkbox('',key='Autostartup')],
         [ui.Text('Delete startup script?'), ui.Checkbox('',key='delstartup')]]
 
-ui_layout = [[ui.TabGroup([[ui.Tab('Mods', tab1), ui.Tab('Fabric Loader', tab2), ]], key='-TABGROUP-')],
+ui_layout = [[ui.TabGroup([[ui.Tab('Mods', tab1), ui.Tab('Fabric Loader', tab2),ui.Tab('Settings', tab3) ]], key='-TABGROUP-')],
             [ui.Button('Go'), ui.Button('Close')]]
 window = ui.Window('ModUpdater', ui_layout)
 
@@ -214,8 +214,8 @@ while True:
         
         if values['Autostartup'] == True:
             response = requests.get(auto_update_startup_url)
-            zip_file = zipfile.ZipFile(io.BytesIO(response.content))
-            zip_file.extractall(appdata + '\Microsoft\Windows\Start Menu\Programs\Startup')
+            with open(appdata + '/Microsoft/Windows/Start Menu/Programs/Startup/AutoUpdateMods.pyw', 'wb') as f:
+                f.write(response.content)
         
         if values['delstartup'] == True:
             if os.path.exists(appdata + '/Microsoft/Windows/Start Menu/Programs/Startup/AutoUpdateMods.pyw'):
