@@ -1,9 +1,5 @@
 import os
-import zipfile
-import io
 import shutil
-import subprocess
-import pkg_resources
 import sys
 import json
 import requests
@@ -20,6 +16,7 @@ else:
 
 
 #vars
+current_version = 0.2
 Minecraft_folder = appdata + "/.minecraft"
 mod_folder = Minecraft_folder + "/mods"
 TEMP_folder = Minecraft_folder + "/mods/TEMP"
@@ -29,6 +26,7 @@ updated_mods = 0
 
 
 toaster = ToastNotifier()
+
 
 #update vars
 def update_vars(Minecraft_folder):
@@ -78,18 +76,34 @@ with open(all_mods_json, 'wb') as f:
 with open(all_mods_json, 'r') as file_all_mods:
     data_json_all_mods = json.load(file_all_mods)
 
+
+
 def download_and_install_mods():
     global updated_mods
 
     print("Downloading and uzipping files")
 
     all_installed_mods = os.listdir(mod_folder)
-    print(all_installed_mods)
 
-    
+
     for file in data_json_all_mods:
-        print(f"File name: {file['name']}")
-        print(f"Download URL: {file['download_url']}")
+        if file['name'] in all_installed_mods:
+            pass
+            #print(file['name'] + ' is installed')
+        else:
+            print(file["name"])
+            print(file['download_url'])
+            response = requests.get(file['download_url'])
+            with open(TEMP_folder + '/' + file['name'], 'wb') as f:
+                f.write(response.content)
+        
+        all_files_in_temp = os.listdir(TEMP_folder)
+
+        for mod in all_files_in_temp:
+            if mod.endswith('.jar'):
+                shutil.copy(TEMP_folder + '/' + mod, mod_folder)
+                updated_mods += 1
+
         
 
     #show popup
@@ -104,5 +118,23 @@ def download_and_install_mods():
     if os.path.isdir(TEMP_folder):
         print("Deleting TEMP folder")
         shutil.rmtree(TEMP_folder)
+
+def Newversion():
+    #show popup
+    toaster.show_toast(
+    "There is a new version available!", # title
+    "Version " + str(latest_version) + " is availabe", # message
+    duration=5, # for how many seconds toast should be visible; None = leave notification in Notification Center
+    threaded=False, # True = run other code in parallel; False = code execution will wait till notification disappears 
+    )
+
+
+#check if new version exists
+latest_version = data_json_config[0]['latest_version']
+
+
+if float(latest_version) > float(current_version):
+    Newversion()
+
 
 download_and_install_mods()
