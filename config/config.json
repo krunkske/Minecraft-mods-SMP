@@ -5,6 +5,7 @@
         "Mods_url" : "https://github.com/krunkske/Minecraft-mods-SMP/archive/refs/heads/main.zip",
         "Config_url" : "https://github.com/krunkske/Minecraft-mods-SMP/raw/main/config/config.json",
         "Fabric_url" : "https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.2/fabric-installer-0.11.2.jar",
-        "auto_update_startup_url" : "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Scripts/AutoUpdateMods.pyw"
+        "auto_update_startup_url" : "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Scripts/AutoUpdateMods.pyw",
+        "all_mods_url" : ""
     }
 ]
