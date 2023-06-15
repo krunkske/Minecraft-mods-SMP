@@ -38,6 +38,8 @@ def update_vars(Minecraft_folder):
     all_mods_json = TEMP_folder + '/all_mods.json'
     return mod_folder, TEMP_folder, fabric_fileplace, all_mods_json
 
+
+
 #download and open config file as file_config
 response = requests.get("https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/config/config.json")
 with open(json_config, 'wb') as f:
@@ -55,16 +57,8 @@ with open(json_preferences, 'r') as file_pref:
 #url vars
 mods_url = data_json_config[0]['Mods_url']
 config_url = data_json_config[0]['Config_url']
-all_mods_url = data_json_config[0]['All_mods_url']
+all_mods_url = data_json_config[0]['all_mods_url']
 
-
-#download and open All_mods.json
-response = requests.get(all_mods_url)
-with open(all_mods_json, 'wb') as f:
-    f.write(response.content)
-
-with open(TEMP_folder, 'r') as file_all_mods:
-     data_json_all_mods = json.load(file_all_mods)
 
 
 #get minecraft folder from pref
@@ -72,7 +66,17 @@ if data_json_pref[0]['minecraft_folder'] != "":
     Minecraft_folder = data_json_pref[0]['minecraft_folder']
     mod_folder, TEMP_folder, fabric_fileplace, all_mods_json = update_vars(Minecraft_folder)
 
+#make temp dir bc something doesnt work
+if not os.path.exists(TEMP_folder):
+    os.mkdir(TEMP_folder)
 
+#download and open All_mods.json
+response = requests.get(all_mods_url)
+with open(all_mods_json, 'wb') as f:
+    f.write(response.content)
+
+with open(all_mods_json, 'r') as file_all_mods:
+    data_json_all_mods = json.load(file_all_mods)
 
 def download_and_install_mods():
     global updated_mods
@@ -82,6 +86,13 @@ def download_and_install_mods():
     all_installed_mods = os.listdir(mod_folder)
     print(all_installed_mods)
 
+    
+    for file in data_json_all_mods:
+        print(f"File name: {file['name']}")
+        print(f"Download URL: {file['download_url']}")
+        
+
+    #show popup
     toaster.show_toast(
     "Your mods have been updated!", # title
     str(updated_mods) + " mods have been installed", # message

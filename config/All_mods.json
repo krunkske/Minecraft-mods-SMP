@@ -1,1 +1,102 @@
-["architectury-9.0.7-fabric.jar", "chunksfadein-v1.0.0-1.20.jar", "cloth-config-11.0.99-fabric.jar", "continuity-3.0.0-beta.2+1.20.jar", "CraftPresence-2.0.7+1.20.jar", "dashloader-5.0.0-beta.1+1.20.0.jar", "eating-animation-1.9.4+1.20.jar", "entityculling-fabric-1.6.2-mc1.20.jar", "fabric-api-0.83.0+1.20.jar", "ferritecore-6.0.0-fabric.jar", "ImmediatelyFast-1.1.13+1.20.jar", "indium-1.0.18+mc1.20.jar", "iris-mc1.20-1.6.4.jar", "jamlib-0.6.0+1.20.jar", "lithium-fabric-mc1.20-0.11.2.jar", "modmenu-7.0.0.jar", "notenoughanimations-fabric-1.6.4-mc1.20.jar", "owo-lib-0.11.0+1.20.jar", "RoughlyEnoughItems-12.0.622.jar", "sodium-fabric-mc1.20-0.4.10+build.27.jar", "soundphysics-fabric-1.20-1.1.1.jar", "visuality-0.7.0+1.20 (1).jar", "wraith-waystones-3.1.2+mc1.20.jar", "XaerosWorldMap_1.30.3_Fabric_1.20.jar", "Xaeros_Minimap_23.4.4_Fabric_1.20.jar"]
+[
+    {
+        "name": "CraftPresence-2.0.7+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/CraftPresence-2.0.7%2B1.20.jar"
+    },
+    {
+        "name": "ImmediatelyFast-1.1.13+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/ImmediatelyFast-1.1.13%2B1.20.jar"
+    },
+    {
+        "name": "RoughlyEnoughItems-12.0.622.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/RoughlyEnoughItems-12.0.622.jar"
+    },
+    {
+        "name": "XaerosWorldMap_1.30.3_Fabric_1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/XaerosWorldMap_1.30.3_Fabric_1.20.jar"
+    },
+    {
+        "name": "Xaeros_Minimap_23.4.4_Fabric_1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/Xaeros_Minimap_23.4.4_Fabric_1.20.jar"
+    },
+    {
+        "name": "architectury-9.0.7-fabric.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/architectury-9.0.7-fabric.jar"
+    },
+    {
+        "name": "chunksfadein-v1.0.0-1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/chunksfadein-v1.0.0-1.20.jar"
+    },
+    {
+        "name": "cloth-config-11.0.99-fabric.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/cloth-config-11.0.99-fabric.jar"
+    },
+    {
+        "name": "continuity-3.0.0-beta.2+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/continuity-3.0.0-beta.2%2B1.20.jar"
+    },
+    {
+        "name": "dashloader-5.0.0-beta.1+1.20.0.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/dashloader-5.0.0-beta.1%2B1.20.0.jar"
+    },
+    {
+        "name": "eating-animation-1.9.4+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/eating-animation-1.9.4%2B1.20.jar"
+    },
+    {
+        "name": "entityculling-fabric-1.6.2-mc1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/entityculling-fabric-1.6.2-mc1.20.jar"
+    },
+    {
+        "name": "fabric-api-0.83.0+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/fabric-api-0.83.0%2B1.20.jar"
+    },
+    {
+        "name": "ferritecore-6.0.0-fabric.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/ferritecore-6.0.0-fabric.jar"
+    },
+    {
+        "name": "indium-1.0.18+mc1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/indium-1.0.18%2Bmc1.20.jar"
+    },
+    {
+        "name": "iris-mc1.20-1.6.4.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/iris-mc1.20-1.6.4.jar"
+    },
+    {
+        "name": "jamlib-0.6.0+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/jamlib-0.6.0%2B1.20.jar"
+    },
+    {
+        "name": "lithium-fabric-mc1.20-0.11.2.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/lithium-fabric-mc1.20-0.11.2.jar"
+    },
+    {
+        "name": "modmenu-7.0.0.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/modmenu-7.0.0.jar"
+    },
+    {
+        "name": "notenoughanimations-fabric-1.6.4-mc1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/notenoughanimations-fabric-1.6.4-mc1.20.jar"
+    },
+    {
+        "name": "owo-lib-0.11.0+1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/owo-lib-0.11.0%2B1.20.jar"
+    },
+    {
+        "name": "sodium-fabric-mc1.20-0.4.10+build.27.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/sodium-fabric-mc1.20-0.4.10%2Bbuild.27.jar"
+    },
+    {
+        "name": "soundphysics-fabric-1.20-1.1.1.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/soundphysics-fabric-1.20-1.1.1.jar"
+    },
+    {
+        "name": "visuality-0.7.0+1.20 (1).jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/visuality-0.7.0%2B1.20%20(1).jar"
+    },
+    {
+        "name": "wraith-waystones-3.1.2+mc1.20.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/wraith-waystones-3.1.2%2Bmc1.20.jar"
+    }
+]
