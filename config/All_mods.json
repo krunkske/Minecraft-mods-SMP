@@ -68,12 +68,20 @@
         "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/jamlib-0.6.0%2B1.20.jar"
     },
     {
+        "name": "litematica-fabric-1.20.1-0.15.0.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/litematica-fabric-1.20.1-0.15.0.jar"
+    },
+    {
         "name": "lithium-fabric-mc1.20-0.11.2.jar",
         "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/lithium-fabric-mc1.20-0.11.2.jar"
     },
     {
         "name": "modmenu-7.0.0.jar",
         "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/modmenu-7.0.0.jar"
+    },
+    {
+        "name": "mousewheelie-1.11.1+mc1.20-pre2.jar",
+        "download_url": "https://raw.githubusercontent.com/krunkske/Minecraft-mods-SMP/main/Mods/mousewheelie-1.11.1%2Bmc1.20-pre2.jar"
     },
     {
         "name": "notenoughanimations-fabric-1.6.4-mc1.20.jar",
