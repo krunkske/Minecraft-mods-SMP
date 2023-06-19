@@ -227,6 +227,11 @@ while True:
                         Minecraft_folder = TEMP_Minecraft_folder
                         window['browse1'].update(Minecraft_folder)
                         mod_folder, TEMP_folder, fabric_fileplace, all_mods_json = update_vars(Minecraft_folder)
+        else:
+            if TEMP_Minecraft_folder:
+                Minecraft_folder = TEMP_Minecraft_folder
+                window['browse1'].update(Minecraft_folder)
+                mod_folder, TEMP_folder, fabric_fileplace, all_mods_json = update_vars(Minecraft_folder)
     if event == 'Go':
         #saves the minecraft folder path to the pref json
         data_json_pref[0]['minecraft_folder'] = Minecraft_folder
