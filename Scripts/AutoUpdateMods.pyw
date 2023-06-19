@@ -21,7 +21,7 @@ Minecraft_folder = appdata + "/.minecraft"
 mod_folder = Minecraft_folder + "/mods"
 TEMP_folder = Minecraft_folder + "/mods/TEMP"
 json_preferences = appdata + '/ModUpdater/preferences.json'
-all_mods_json = TEMP_folder + '/all_mods.json'
+all_mods_json = appdata + '/ModUpdater/all_mods.json'
 updated_mods = 0
 
 
@@ -33,7 +33,7 @@ def update_vars(Minecraft_folder):
     mod_folder = Minecraft_folder + "/mods"
     TEMP_folder = Minecraft_folder + "/mods/TEMP"
     fabric_fileplace = TEMP_folder + "/fabric_loader"
-    all_mods_json = TEMP_folder + '/all_mods.json'
+    all_mods_json = appdata + '/ModUpdater/all_mods.json'
     return mod_folder, TEMP_folder, fabric_fileplace, all_mods_json
 
 
@@ -138,3 +138,7 @@ if float(latest_version) > float(current_version):
 
 
 download_and_install_mods()
+
+if os.path.isdir(TEMP_folder):
+    print("Deleting TEMP folder")
+    shutil.rmtree(TEMP_folder)
