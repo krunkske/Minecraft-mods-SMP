@@ -16,7 +16,7 @@ else:
 
 
 #vars
-current_version = 0.2
+current_version = 0.3
 Minecraft_folder = appdata + "/.minecraft"
 mod_folder = Minecraft_folder + "/mods"
 TEMP_folder = Minecraft_folder + "/mods/TEMP"
@@ -99,17 +99,18 @@ def download_and_install_mods():
         
         all_files_in_temp = os.listdir(TEMP_folder)
 
+        updated_mods = set()
         for mod in all_files_in_temp:
             if mod.endswith('.jar'):
                 shutil.copy(TEMP_folder + '/' + mod, mod_folder)
-                updated_mods += 1
+                updated_mods.add(mod)
 
         
 
     #show popup
     toaster.show_toast(
     "Your mods have been updated!", # title
-    str(updated_mods) + " mods have been installed", # message
+    str(len(updated_mods)) + " mods have been installed", # message
     duration=5, # for how many seconds toast should be visible; None = leave notification in Notification Center
     threaded=True, # True = run other code in parallel; False = code execution will wait till notification disappears 
     )

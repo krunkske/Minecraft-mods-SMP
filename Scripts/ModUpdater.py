@@ -37,7 +37,7 @@ import requests
 import PySimpleGUI as ui
 
 #vars
-current_version = 0.2
+current_version = 0.3
 updated_mods = 0
 Minecraft_folder = appdata + "/.minecraft"
 mod_folder = Minecraft_folder + "/mods"
@@ -135,12 +135,13 @@ def download_and_install_mods():
         
         all_files_in_temp = os.listdir(TEMP_folder)
 
+        updated_mods = set()
         for mod in all_files_in_temp:
             if mod.endswith('.jar'):
+                updated_mods.add(mod)
                 shutil.copy(TEMP_folder + '/' + mod, mod_folder)
-                updated_mods += 1
 
-    print(str(updated_mods) + " mods have been installed.")
+    print(str(len(updated_mods)) + " mods have been installed.")
 
 def install_fabric_loader():
 
@@ -182,8 +183,12 @@ def delete_all_mods():
     if os.path.isdir(mod_folder):
         del_all_mods_installed = os.listdir(mod_folder)
     for mod in del_all_mods_installed:
-        file_path = os.path.join(mod_folder, mod)
-        shutil.rmtree(file_path)
+        if mod.endswith("TEMP"):
+            pass
+        else:
+            file_path = os.path.join(mod_folder, mod)
+            os.remove(file_path)
+    print("All mods have been deleted!")
 
 #creating the GUI
 ui.theme('LIghtGrey1')
